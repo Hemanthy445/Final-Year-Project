@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>crop</title>
+  <style>
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .container {
+      margin-top: 30px;
+    }
+
+    .row {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form action="/submit" method="post">
+      <h2 class="display-5 text-danger">Yield and Price</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="cropsList" class="form-label">Crop Item</label>
+            <input class="form-control" list="datalistOptions" id="cropsList" placeholder="Type to search..."
+              name="CropItem">
+            <datalist id="datalistOptions">
+              <option value="Anise, badian, fennel, coriander">
+              <option value="Apples">
+              <option value="Apricots">
+              <option value="Areca nuts">
+              <option value="Bananas">
+              <option value="Barley">
+              <option value="Bastfibres, other">
+              <option value="Beans, dry">
+              <option value="Beans, green">
+              <option value="Berries nes">
+              <option value="Cabbages and other brassicas">
+              <option value="Carrots and turnips">
+              <option value="Cashew nuts, with shell">
+              <option value="Cassava">
+              <option value="Castor oil seed">
+              <option value="Cauliflowers and broccoli">
+              <option value="Cherries">
+              <option value="Chick peas">
+              <option value="Chillies and peppers, dry">
+              <option value="Chillies and peppers, green">
+              <option value="Cocoa, beans">
+              <option value="Coconuts">
+              <option value="Coffee, green">
+              <option value="Cucumbers and gherkins">
+              <option value="Eggplants (aubergines)">
+              <option value="Figs">
+              <option value="Fruit, citrus nes">
+              <option value="Fruit, fresh nes">
+              <option value="Fruit, stone nes">
+              <option value="Fruit, tropical fresh nes">
+              <option value="Garlic">
+              <option value="Ginger">
+              <option value="Grapefruit (inc. pomelos)">
+              <option value="Grapes">
+              <option value="Groundnuts, with shell">
+              <option value="Jute">
+              <option value="Lemons and limes">
+              <option value="Lentils">
+              <option value="Lettuce and chicory">
+              <option value="Linseed">
+              <option value="Maize">
+              <option value="Mangoes, mangosteens, guavas">
+              <option value="Melons, other (inc.cantaloupes)">
+              <option value="Millet">
+              <option value="Nutmeg, mace and cardamoms">
+              <option value="Oilseeds nes">
+              <option value="Okra">
+              <option value="Onions, dry">
+              <option value="Oranges">
+              <option value="Papayas">
+              <option value="Peaches and nectarines">
+              <option value="Pears">
+              <option value="Peas, dry">
+              <option value="Peas, green">
+              <option value="Pepper (piper spp.)">
+              <option value="Pigeon peas">
+              <option value="Pineapples">
+              <option value="Plums and sloes">
+              <option value="Potatoes">
+              <option value="Pulses nes">
+              <option value="Pumpkins, squash and gourds">
+              <option value="Rapeseed">
+              <option value="Rice, paddy">
+              <option value="Rubber, natural">
+              <option value="Safflower seed">
+              <option value="Seed cotton">
+              <option value="Sesame seed">
+              <option value="Sorghum">
+              <option value="Soybeans">
+              <option value="Spices nes">
+              <option value="Sugar cane">
+              <option value="Sunflower seed">
+              <option value="Sweet potatoes">
+              <option value="Tea">
+              <option value="Tobacco, unmanufactured">
+              <option value="Tomatoes">
+              <option value="Vegetables, fresh nes">
+              <option value="Walnuts, with shell">
+              <option value="Watermelons">
+              <option value="Wheat">
+            </datalist>
+          </div>
+        </div>
+        <!--  col-md-4   -->
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="year">Year</label>
+            <input type="text" class="form-control" name="Year" placeholder="year" id="last">
+          </div>
+        </div>
+        <!--  col-md-4   -->
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="temperature">Temperature</label>
+            <input type="text" class="form-control" id="temperature" placeholder="in degrees celcius"
+              name="Temp_ann_degC">
+          </div>
+
+        </div>
+        <!--  col-md-4   -->
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="nutrients">Nutrients</label>
+            <input type="text" class="form-control" id="nutrients" placeholder="in kilograms" name="Nutrients(tonnes)">
+          </div>
+        </div>
+        <!--  col-md-4   -->
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="pesticides">Pesticides</label>
+            <input type="text" class="form-control" id="pesticides" placeholder="in kilograms"
+              name="Pesticides(tonnes)">
+          </div>
+
+        </div>
+        <!--  col-md-4   -->
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="synthetic">Synthetic Fertilizers</label>
+            <input type="text" class="form-control" id="synthetic" placeholder="in kilograms"
+              name="SyntheticFert(tonnes)">
+          </div>
+        </div>
+        <!--  col-md-4   -->
+      </div>
+      <!--  row   -->
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="areaused">Land Area Used</label>
+            <input type="text" class="form-control" placeholder="in acres" id="areaused" name="LandUsed">
+          </div>
+
+
+        </div>
+        <!--  col-md-4   -->
+
+        <div class="col-md-4">
+
+          <div class="form-group">
+            <label for="irrigated">Land Area Irrigated</label>
+            <input type="text" class="form-control" id="irrigated" placeholder="in acres" name="LandIrrigated">
+          </div>
+        </div>
+        <!--  col-md-4   -->
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="currPrice">Today's Market Price</label>
+            <input type="text" class="form-control" id="currPrice" placeholder="in Rs. per kg" name="MarketPrice">
+          </div>
+        </div>
+        <!--  col-md-4   -->
+      </div>
+      <!--  row   -->
+
+
+
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
